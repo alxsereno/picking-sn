@@ -18,13 +18,15 @@ app.use(helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
-      scriptSrc:  [
-        "'self'",
-        "'unsafe-inline'",
-        "'unsafe-eval'",
-        "unpkg.com",
-        "cdn.jsdelivr.net",
-      ],
+      scriptSrc: [
+  "'self'",
+  "'unsafe-inline'",
+  "'unsafe-eval'",
+  "unpkg.com",
+  "*.unpkg.com",
+  "cdn.jsdelivr.net",
+  "*.jsdelivr.net",
+],
       scriptSrcAttr: ["'unsafe-inline'"],
       styleSrc:   ["'self'", "'unsafe-inline'", "fonts.googleapis.com"],
       fontSrc:    ["'self'", "fonts.gstatic.com"],
